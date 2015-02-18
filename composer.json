@@ -1,0 +1,27 @@
+{
+    "name": "jayshah88/yii2-multilevel-category",
+    "description": "Create n level child dropdown",
+    "keywords": ["yii2", "category", "multilevel", "subchild", "nlevel", "dropdown"],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/jayshah88/yii2-multilevel-category/issues",
+        "source": "https://github.com/jayshah88/yii2-multilevel-category"
+    },
+    "authors": [
+        {
+            "name": "Jay Shah",
+            "email": "jayshah88@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.0",
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "jay\\": ""
+        }
+    }
+}

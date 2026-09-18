@@ -1,7 +1,17 @@
 {
     "name": "jayshah88/yii2-multilevel-category",
-    "description": "Create n level child dropdown",
-    "keywords": ["yii2", "category", "multilevel", "subchild", "nlevel", "dropdown"],
+    "description": "Create n-level hierarchical category dropdowns for Yii2 from an adjacency-list table using a single query",
+    "keywords": [
+        "yii2",
+        "category",
+        "multilevel",
+        "subchild",
+        "nlevel",
+        "dropdown",
+        "tree",
+        "hierarchical",
+        "adjacency-list"
+    ],
     "type": "yii2-extension",
     "license": "BSD-3-Clause",
     "support": {
@@ -11,17 +21,61 @@
     "authors": [
         {
             "name": "Jay Shah",
-            "email": "jayshah88@gmail.com"
+            "email": "jayshah88@gmail.com",
+            "homepage": "https://github.com/jayshah88",
+            "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.5.0",
-        "yiisoft/yii2": "*"
+        "php": "^7.4 || ^8.0",
+        "yiisoft/yii2": "^2.0.46"
+    },
+    "require-dev": {
+        "composer/installers": "^2.3",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "phpunit/phpunit": "^9.6"
     },
     "autoload": {
         "psr-4": {
-            "jay\\": ""
+            "Jay\\": "src/",
+            "jay\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "vendor/bower-asset/{$name}": [
+                "type:bower-asset"
+            ],
+            "vendor/npm-asset/{$name}": [
+                "type:npm-asset"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "oomphinc/composer-installers-extender": true,
+            "yiisoft/yii2-composer": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
     }
 }
+
